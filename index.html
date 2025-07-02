@@ -1,1 +1,150 @@
-Hola
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Osvaldo Fuentes | Infraestructura & Ciberseguridad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f1117;
+      --accent: #00c9a7;
+      --text: #f2f2f2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--primary);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 80px 20px 60px;
+      text-align: center;
+      animation: fadeInDown 1.2s ease-out;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--accent);
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .cta-button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      background-color: var(--accent);
+      color: var(--primary);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    section p {
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #0a0c10;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Osvaldo Fuentes</h1>
+    <p>Consultor en Infraestructura TI & Ciberseguridad</p>
+    <a href="https://www.linkedin.com/in/osvaldofuentes" target="_blank">
+      <button class="cta-button">Conectar en LinkedIn</button>
+    </a>
+  </header>
+
+  <section>
+    <h2>Sobre mí</h2>
+    <p>
+      Soy ingeniero titulado en Infraestructura y Plataformas Tecnológicas con experiencia en consultoría TI, especializado en soluciones de ciberseguridad, redes e implementación de tecnologías en la nube. En mi trayectoria he trabajado con clientes de distintos sectores, gestionando plataformas como Microsoft 365, Azure y soluciones de seguridad como Cato Networks.
+    </p>
+  </section>
+
+  <section>
+    <h2>Servicios y especialidades</h2>
+    <p>
+      • Arquitectura y gestión de infraestructura TI<br>
+      • Administración avanzada de Microsoft 365 y Azure<br>
+      • Seguridad perimetral y redes SD-WAN con Cato Networks<br>
+      • Respaldos, continuidad operacional y recuperación<br>
+      • Monitoreo de servicios críticos y soporte estratégico<br>
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Osvaldo Fuentes | haxcloud.cl | Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
