@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Osvaldo Fuentes | Infraestructura & Ciberseguridad</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <meta name="description" content="Portafolio de Osvaldo Fuentes, consultor TI especializado en Infraestructura y Ciberseguridad.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -11,13 +13,11 @@
       --accent: #00c9a7;
       --text: #f2f2f2;
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--primary);
@@ -25,24 +25,39 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #0a0c10;
+      padding: 10px 0;
+      z-index: 1000;
+      text-align: center;
+    }
+    nav a {
+      color: var(--text);
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
     header {
-      padding: 80px 20px 60px;
+      padding: 120px 20px 60px;
       text-align: center;
       animation: fadeInDown 1.2s ease-out;
     }
-
     header h1 {
       font-size: 3rem;
       color: var(--accent);
     }
-
     header p {
       margin-top: 10px;
       font-size: 1.2rem;
       color: #ccc;
     }
-
     .cta-button {
       margin-top: 30px;
       padding: 15px 30px;
@@ -54,29 +69,35 @@
       cursor: pointer;
       transition: transform 0.3s ease;
     }
-
     .cta-button:hover {
       transform: scale(1.05);
     }
-
     section {
       max-width: 900px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 80px 20px;
       animation: fadeIn 1.5s ease-out;
     }
-
     section h2 {
       font-size: 2rem;
       margin-bottom: 20px;
       color: var(--accent);
     }
-
-    section p {
+    section p, section ul {
       font-size: 1rem;
       color: #ddd;
     }
-
+    section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    section ul li::before {
+      content: "•";
+      color: var(--accent);
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -84,62 +105,73 @@
       color: #888;
       font-size: 0.9rem;
     }
-
     @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
+      header h1 { font-size: 2.2rem; }
+      nav a { margin: 0 10px; font-size: 0.9rem; }
     }
   </style>
 </head>
 <body>
 
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto" style="color: var(--accent);">Contacto</a>
+  </nav>
+
   <header>
     <h1>Osvaldo Fuentes</h1>
-    <p>Consultor en Infraestructura TI & Ciberseguridad</p>
+    <p>Consultor en Infraestructura TI &amp; Ciberseguridad en ActiveIT</p>
     <a href="https://www.linkedin.com/in/osvaldofuentes" target="_blank">
       <button class="cta-button">Conectar en LinkedIn</button>
     </a>
+    <a href="mailto:osvaldo@haxcloud.cl">
+      <button class="cta-button">Escríbeme</button>
+    </a>
   </header>
 
-  <section>
+  <section id="sobre-mi">
     <h2>Sobre mí</h2>
     <p>
-      Soy ingeniero titulado en Infraestructura y Plataformas Tecnológicas con experiencia en consultoría TI, especializado en soluciones de ciberseguridad, redes e implementación de tecnologías en la nube. En mi trayectoria he trabajado con clientes de distintos sectores, gestionando plataformas como Microsoft 365, Azure y soluciones de seguridad como Cato Networks.
+      Ingeniero en Infraestructura y Plataformas Tecnológicas, con experiencia en proyectos de migración, seguridad perimetral, cloud híbrida y monitoreo de entornos críticos. Actualmente me desempeño como Consultor en ActiveIT, donde asesoro a clientes en la implementación de soluciones robustas, seguras y escalables en Microsoft 365, Azure, SentinelOne y Cato Networks.
     </p>
   </section>
 
-  <section>
+  <section id="servicios">
     <h2>Servicios y especialidades</h2>
-    <p>
-      • Arquitectura y gestión de infraestructura TI<br>
-      • Administración avanzada de Microsoft 365 y Azure<br>
-      • Seguridad perimetral y redes SD-WAN con Cato Networks<br>
-      • Respaldos, continuidad operacional y recuperación<br>
-      • Monitoreo de servicios críticos y soporte estratégico<br>
-    </p>
+    <ul>
+      <li>Arquitectura y gestión de infraestructura TI</li>
+      <li>Administración avanzada de Microsoft 365 y Azure</li>
+      <li>Seguridad perimetral y redes SD‑WAN con Cato Networks</li>
+      <li>Respaldos, continuidad operacional y recuperación</li>
+      <li>Monitoreo de servicios críticos y soporte estratégico</li>
+    </ul>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos destacados</h2>
+    <ul>
+      <li>Implementación de SentinelOne en entorno con &gt;500 dispositivos para cliente financiero.</li>
+      <li>Diseño de arquitectura y migración de Microsoft 365 para empresa retail con &gt;300 usuarios.</li>
+      <li>Prueba de concepto y despliegue de red SD‑WAN con Cato Networks para empresa logística.</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Te interesa colaborar o tienes alguna pregunta? Escríbeme:</p>
+    <a href="mailto:osvaldo@haxcloud.cl">
+      <button class="cta-button">osvaldo@haxcloud.cl</button>
+    </a>
   </section>
 
   <footer>
